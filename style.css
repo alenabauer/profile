@@ -106,3 +106,27 @@ a {
     width: 70%;
   }
 }
+
+.gallery-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-pic {
+  width: 25%;
+  transition: .3s;
+}
+
+.gallery-pic img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.gallery-pic:hover {
+  transform: scale(1.5);
+}
