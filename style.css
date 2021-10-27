@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inconsolata&display=swap');
 
+:root {
+  --light-color: #F6F7F9;
+  --dark-color: #010C22;
+  --yellow-color: #FFB140;
+  --light-blue-color: #9AABB7;
+  --bg-img-url: url('https://images.unsplash.com/photo-1469053913977-1d2f009670d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80');
+}
+
 body {
-  color: #F6F7F9;
-  background-color: #F6F7F9;
-  background-image: url('https://images.unsplash.com/photo-1469053913977-1d2f009670d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80');
+  color: var(--light-color);
+  background-color: var(--light-color);
+  background-image: var(--bg-img-url);
   background-size: cover;
   font-family: 'Inconsolata', monospace;
 }
 
 h1, h2 {
-  color: #FFB140;
+  color: var(--yellow-color);
   font-family: 'Architects Daughter', cursive;
 }
 
 a {
-  color: #9AABB7;
+  color: var(--light-blue-color);
   text-decoration: none;
 }
 
 .card {
-  background-color: #010C22;
+  background-color: var(--dark-color);
   width: 40%;
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px #9AABB7;
+  box-shadow: 2px 2px 10px var(--light-blue-color);
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -43,7 +51,7 @@ a {
 .img-avatar {
   width: 120px;
   border-radius: 50%;
-  border: solid 5px #FFB140;
+  border: solid 5px var(--yellow-color);
   transition: 1s;
 }
 
@@ -55,8 +63,8 @@ a {
   display: block;
   width: 30%;
   margin: 0 auto;
-  background-color: #9AABB7;
-  color: #F6F7F9;
+  background-color: var(--light-blue-color);
+  color: var(--dark-color);
   border-radius: 15px;
   padding: 7px 15px;
   line-height: 2;
@@ -64,8 +72,7 @@ a {
 }
 
 .btn:hover {
-  background-color: #FFB140;
-  color: #010C22;
+  background-color: var(--yellow-color);
 }
 
 .icon-list li {
@@ -83,12 +90,15 @@ a {
 }
 
 .icon-btn:hover {
-  color: #FFB140;
+  color: var(--yellow-color);
 }
 
 /* Media Queries */
 
-@media (max-width: 540px) {
+@media (max-width: 1024px) {
+  body {
+    background-attachment: fixed;
+  }
   .card {
     width: 80%;
   }
